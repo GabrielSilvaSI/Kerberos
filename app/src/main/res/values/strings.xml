@@ -19,4 +19,6 @@
     <string name="close">Close</string>
     <string name="chat_list">Chat list</string>
     <string name="add_chat">Add chat</string>
+    <string name="create_chat">Create chat</string>
+    <string name="start_chat">Start chat</string>
 </resources>

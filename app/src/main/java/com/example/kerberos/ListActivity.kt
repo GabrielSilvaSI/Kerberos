@@ -23,5 +23,10 @@ class ListActivity : AppCompatActivity() {
             Firebase.auth.signOut()
             finish()
         }
+        val buttonAddChat = findViewById<ImageButton>(R.id.buttonAddChat)
+        buttonAddChat.setOnClickListener {
+            val intent = Intent(this, CreateChatActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

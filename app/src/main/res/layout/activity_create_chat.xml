@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CreateChatActivity" android:background="@color/black">
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" app:srcCompat="?attr/actionModeCloseDrawable"
+            android:id="@+id/buttonListBack"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:contentDescription="@string/back"/>
+    <TextView
+            android:text="@string/create_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCreateChat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonListBack"
+            app:layout_constraintStart_toEndOf="@+id/buttonListBack" style="@style/TextView_title"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonListBack"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/editTextName"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCreateChat" style="@style/EditText_form"
+            android:hint="@string/name"
+            app:layout_constraintBottom_toTopOf="@+id/editTextEmailCC" android:autofillHints=""/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text|textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editTextEmailCC"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" style="@style/EditText_form"
+            android:hint="@string/email"
+            app:layout_constraintBottom_toTopOf="@+id/buttonStartChat" android:autofillHints=""/>
+    <Button
+            android:text="@string/start_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/buttonStartChat"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailCC" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Button_text"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
