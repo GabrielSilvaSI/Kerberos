@@ -13,7 +13,6 @@ import com.google.firebase.auth.auth
 
 class SignupActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
-    private lateinit var editTextNameSignup: EditText
     private lateinit var editTextEmailSignup: EditText
     private lateinit var editTextPasswordSignup: EditText
     private lateinit var editTextRepeatPasswordSignup: EditText
@@ -21,8 +20,6 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-
-        editTextNameSignup = findViewById(R.id.editTextNameSignup)
         editTextEmailSignup = findViewById(R.id.editTextEmailSignup)
         editTextPasswordSignup = findViewById(R.id.editTextPasswordSignup)
         editTextRepeatPasswordSignup = findViewById(R.id.editTextRepeatPasswordSignup)
@@ -46,15 +43,9 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun camposSaoValidos(): Boolean {
-        val name = editTextNameSignup.text.toString()
         val email = editTextEmailSignup.text.toString()
         val password = editTextPasswordSignup.text.toString()
         val repeatPassword = editTextRepeatPasswordSignup.text.toString()
-
-        if (name.isEmpty()) {
-            editTextNameSignup.error = "Por favor, insira seu nome"
-            return false
-        }
         if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmailSignup.error = "Por favor, insira um email válido"
             return false
@@ -71,7 +62,6 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun cadastrarUsuario() {
-        val name = editTextNameSignup.text.toString()
         val email = editTextEmailSignup.text.toString()
         val password = editTextPasswordSignup.text.toString()
         auth.createUserWithEmailAndPassword(email, password)

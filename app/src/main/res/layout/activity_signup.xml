@@ -20,19 +20,7 @@
             style="@style/TextView_title" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintBottom_toTopOf="@+id/editTextNameSignup"/>
-    <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/editTextNameSignup"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent" android:hint="@string/name"
-            app:layout_constraintHorizontal_bias="0.0"
-            style="@style/EditText_form"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintBottom_toTopOf="@+id/editTextEmailSignup" android:autofillHints=""/>
+            app:layout_constraintBottom_toTopOf="@+id/editTextEmailSignup"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -41,9 +29,10 @@
             android:id="@+id/editTextEmailSignup"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNameSignup" style="@style/EditText_form"
+            style="@style/EditText_form"
             android:hint="@string/email"
-            app:layout_constraintBottom_toTopOf="@+id/editTextPasswordSignup" android:autofillHints=""/>
+            app:layout_constraintBottom_toTopOf="@+id/editTextPasswordSignup" android:autofillHints=""
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
